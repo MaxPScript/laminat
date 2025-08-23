@@ -23,7 +23,7 @@
 		grid-area: width;
 	}
 	.arrowToBottom {
-		/* grid-area: height; */
+		grid-area: height;
 	}
 	.gridLeftSide {
 		grid-area: height;
