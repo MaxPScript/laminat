@@ -1,5 +1,5 @@
 .svg_container {
-	background: cadetblue;
+	background: hsl(182 25% 50% / 1);
 	/* padding: 2em; */
 	display: grid;
 	grid-template-areas:
@@ -7,7 +7,7 @@
 		"height svg ."
 		". . .";
 	grid-template-columns: 24px 1fr 24px;
-	grid-template-rows: auto 1fr 24px;
+	grid-template-rows: 24px 1fr 24px;
 	.width_note {
 		grid-area: width;
 		justify-self: center;
@@ -18,11 +18,17 @@
 		/* border: 1px solid; */
 		align-self: center;
 	}
+	.arrowToRight {
+		grid-area: width;
+	}
+	.arrowToBottom {
+		grid-area: height;
+	}
 }
-svg {
+.room_svg {
 	grid-area: svg;
 	display: block;
-	border: 1px solid hsl(0 50% 0% / 0.5);
+	/* border: 1px solid hsl(0 50% 0% / 0.5); */
 	aspect-ratio: 10/6;
 	transition: aspect-ratio 0.5s;
 	#roomWidthText_id {

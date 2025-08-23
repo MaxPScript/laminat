@@ -37,7 +37,7 @@
 				id="form_id"
 			>
 				<div class="form-group">
-					<label for="inputWidth_id">Room width, m:</label>
+					<label for="inputWidth_id">Room X, m:</label>
 					<input
 						type="number"
 						id="inputWidth_id"
@@ -49,7 +49,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="inputHeight_id">Room height, m:</label>
+					<label for="inputHeight_id">Room Y, m:</label>
 					<input
 						type="number"
 						id="inputHeight_id"
@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="panelWidth_id">Panel width, mm:</label>
+					<label for="panelWidth_id">Panel length (x), mm:</label>
 					<input
 						type="number"
 						id="panelWidth_id"
@@ -73,7 +73,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="panelHeight_id">Panel height, mm:</label>
+					<label for="panelHeight_id">Panel width (y), mm:</label>
 					<input
 						type="number"
 						id="panelHeight_id"
@@ -87,6 +87,86 @@
 				<button type="submit">Reset</button>
 			</form>
 			<section class="svg_container">
+				<!-- preserveAspectRatio="none" -->
+				<svg
+					width="30%"
+					height="100%"
+					viewBox="0 0 100% 100%"
+					class="arrowToRight"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<!-- line across -->
+					<line
+						x1="0"
+						y1="50%"
+						x2="100%"
+						y2="50%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<!-- arrowhead start -->
+					<line
+						x1="90%"
+						y1="30%"
+						x2="100%"
+						y2="50%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<line
+						x1="90%"
+						y1="70%"
+						x2="100%"
+						y2="50%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<!-- arrowhead end -->
+				</svg>
+				<svg
+					width="100%"
+					height="30%"
+					viewBox="0 0 100% 100%"
+					class="arrowToBottom"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<!-- line across -->
+					<line
+						x1="50%"
+						y1="0%"
+						x2="50%"
+						y2="100%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<!-- arrowhead start -->
+					<line
+						x1="70%"
+						y1="80%"
+						x2="50%"
+						y2="100%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<line
+						x1="50%"
+						y1="100%"
+						x2="30%"
+						y2="80%"
+						stroke="black"
+						stroke-width="1"
+						stroke-linecap="round"
+					/>
+					<!-- arrowhead end -->
+				</svg>
+
+				<!-- <span class="arrowToRight"></span> -->
+				<!-- <span class="arrowToBottom"></span> -->
 				<span
 					data-width="50"
 					class="width_note"
@@ -104,6 +184,7 @@
 				<svg
 					width="100%"
 					id="svg_id"
+					class="room_svg"
 				>
 					<!-- <text
 						x="50%"
@@ -130,7 +211,8 @@
 						y="0%"
 						width="100%"
 						height="100%"
-						stroke="orange"
+						stroke-width="5"
+						stroke="hsl(62 50% 50% / 1)"
 						fill="none"
 					></rect>
 					<!-- <line

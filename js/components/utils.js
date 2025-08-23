@@ -1,4 +1,4 @@
-export function inputToSvgText() {
+export function inputToSpanText() {
 	inputWidth_id.addEventListener("input", () => {
 		// inputWidthText_id.textContent = inputWidth_id.value + " m";
 		roomWidthSpan.textContent = inputWidth_id.value + "m";
@@ -37,18 +37,13 @@ export function handleFormSubmit() {
 	});
 	form_id.addEventListener("reset", () => {
 		setTimeout(() => {
-			// console.log("Username after reset:", form_id.inputWidth.value);
-			// inputWidthText_id.textContent = inputWidth_id.value + " m";
-			// inputHeightText_id.textContent = inputHeight_id.value + " m";
 			//
 			roomWidthSpan.textContent = inputWidth_id.value + "m";
 			roomHeightSpan.textContent = inputHeight_id.value + "m";
-
 			//
 			const width = parseFloat(inputWidth_id.value);
 			const height = parseFloat(inputHeight_id.value);
 			svg_id.style.aspectRatio = `${width}/${height}`;
-			// svg_id.style.aspectRatio = `${width}/${height}`;
 		}, 0);
 	});
 }

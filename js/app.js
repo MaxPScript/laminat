@@ -1,6 +1,6 @@
-import { inputToSvgText } from "./components/utils.js";
+import { inputToSpanText } from "./components/utils.js";
 import { setAspectRatioToSvg } from "./components/utils.js";
 import { handleFormSubmit } from "./components/utils.js";
-inputToSvgText();
+inputToSpanText();
 setAspectRatioToSvg();
 handleFormSubmit();
