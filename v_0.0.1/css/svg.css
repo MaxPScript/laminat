@@ -1,0 +1,38 @@
+.svg_container {
+	background: cadetblue;
+	/* padding: 2em; */
+	display: grid;
+	grid-template-areas:
+		". width ."
+		"height svg ."
+		". . .";
+	grid-template-columns: 24px 1fr 24px;
+	grid-template-rows: auto 1fr 24px;
+	.width_note {
+		grid-area: width;
+		justify-self: center;
+	}
+	.height_note {
+		grid-area: height;
+		rotate: 270deg;
+		/* border: 1px solid; */
+		align-self: center;
+	}
+}
+svg {
+	grid-area: svg;
+	display: block;
+	border: 1px solid hsl(0 50% 0% / 0.5);
+	aspect-ratio: 10/6;
+	transition: aspect-ratio 0.5s;
+	#roomWidthText_id {
+		/* text-orientation: upright; */
+		/* writing-mode: vertical-rl; */
+		/* translate: -2% 0; */
+	}
+	#roomHeightText_id {
+		rotate: 270deg;
+		/* translate: 0% 8%; */
+		transform-origin: 9% 50%;
+	}
+}

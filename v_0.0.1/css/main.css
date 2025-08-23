@@ -1,0 +1,21 @@
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+	background: hsl(36 100% 90%);
+}
+h1 {
+	text-align: center;
+}
+button {
+	cursor: pointer;
+}
