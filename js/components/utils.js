@@ -45,6 +45,6 @@ export function handleFormSubmit() {
 			const width = parseFloat(inputWidth_id.value);
 			const height = parseFloat(inputHeight_id.value);
 			svg_id.style.aspectRatio = `${width}/${height}`;
-		}, 0);
+		}, 100);
 	});
 }
