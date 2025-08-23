@@ -14,14 +14,18 @@
 	}
 	.height_note {
 		grid-area: height;
-		rotate: 270deg;
+		/* rotate: 270deg; */
 		/* border: 1px solid; */
 		align-self: center;
+		writing-mode: sideways-rl;
 	}
 	.arrowToRight {
 		grid-area: width;
 	}
 	.arrowToBottom {
+		/* grid-area: height; */
+	}
+	.gridLeftSide {
 		grid-area: height;
 	}
 }
