@@ -1,24 +1,27 @@
+import { laminates } from "./laminates.js";
+import { drawPanels } from "./drawPanels.js";
+//
 export function inputToSpanText() {
-	inputWidth_id.addEventListener("input", () => {
-		// inputWidthText_id.textContent = inputWidth_id.value + " m";
-		roomWidthSpan.textContent = "Room X, " + inputWidth_id.value + "m";
+	inputRoomWidth_id.addEventListener("input", () => {
+		// inputWidthText_id.textContent = inputRoomWidth_id.value + " m";
+		roomWidthSpan.textContent = "Room X, " + inputRoomWidth_id.value + "m";
 	});
-	inputHeight_id.addEventListener("input", () => {
-		// inputHeightText_id.textContent = inputHeight_id.value + " m";
-		roomHeightSpan.textContent = "Room Y, " + inputHeight_id.value + "m";
+	inputRoomHeight_id.addEventListener("input", () => {
+		// inputHeightText_id.textContent = inputRoomHeight_id.value + " m";
+		roomHeightSpan.textContent = "Room Y, " + inputRoomHeight_id.value + "m";
 	});
 	//
 }
 //
 export function setAspectRatioToSvg() {
-	inputWidth_id.addEventListener("input", () => {
-		const width = parseFloat(inputWidth_id.value);
-		const height = parseFloat(inputHeight_id.value);
+	inputRoomWidth_id.addEventListener("input", () => {
+		const width = parseFloat(inputRoomWidth_id.value);
+		const height = parseFloat(inputRoomHeight_id.value);
 		svg_id.style.aspectRatio = `${width}/${height}`;
 	});
-	inputHeight_id.addEventListener("input", () => {
-		const width = parseFloat(inputWidth_id.value);
-		const height = parseFloat(inputHeight_id.value);
+	inputRoomHeight_id.addEventListener("input", () => {
+		const width = parseFloat(inputRoomWidth_id.value);
+		const height = parseFloat(inputRoomHeight_id.value);
 		svg_id.style.aspectRatio = `${width}/${height}`;
 	});
 }
@@ -30,6 +33,8 @@ export function handleFormSubmit() {
 
 		if (btn.textContent === "Apply") {
 			console.log("Apply logic");
+			// console.log(laminates());
+			drawPanels();
 		} else if (btn.textContent === "Reset") {
 			console.log("Reset logic");
 			form_id.reset();
@@ -38,12 +43,12 @@ export function handleFormSubmit() {
 	form_id.addEventListener("reset", () => {
 		setTimeout(() => {
 			//
-			roomWidthSpan.textContent = "Room X, " + inputWidth_id.value + "m";
-			roomHeightSpan.textContent = "Room Y, " + inputHeight_id.value + "m";
+			roomWidthSpan.textContent = "Room X, " + inputRoomWidth_id.value + "m";
+			roomHeightSpan.textContent = "Room Y, " + inputRoomHeight_id.value + "m";
 
 			//
-			const width = parseFloat(inputWidth_id.value);
-			const height = parseFloat(inputHeight_id.value);
+			const width = parseFloat(inputRoomWidth_id.value);
+			const height = parseFloat(inputRoomHeight_id.value);
 			svg_id.style.aspectRatio = `${width}/${height}`;
 		}, 500);
 	});
