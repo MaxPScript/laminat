@@ -1,6 +1,6 @@
 export const db = {
-	roomX: +inputRoomWidth_id.value,
-	roomY: +inputRoomHeight_id.value,
+	roomX: +inputRoomWidthX_id.value,
+	roomY: +inputRoomHeightY_id.value,
 	panelLength: +inputPanelLengthX_id.value / 1000,
 	panelWidth: +inputPanelWidthY_id.value / 1000,
 	svgX: 0,

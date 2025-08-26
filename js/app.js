@@ -1,10 +1,5 @@
-import { db } from "./components/db.js";
-import { inputToSpanText } from "./components/utils.js";
-import { setAspectRatioToSvg } from "./components/utils.js";
-import { handleFormSubmit } from "./components/utils.js";
-import { laminates } from "./components/laminates.js";
-inputToSpanText();
-setAspectRatioToSvg();
-handleFormSubmit();
-// laminates();
-console.log(db);
+import { db } from "./components_2/db.js";
+import { updateDB } from "./components_2/updateDB.js";
+//
+updateDB();
+//

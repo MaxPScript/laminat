@@ -5,8 +5,8 @@ export function laminates() {
 		// console.log(roomX, roomY);
 		// let panelsAmount =
 	});
-	let roomX = inputRoomWidth_id.value; // m
-	let roomY = inputRoomHeight_id.value; // m
+	let roomX = inputRoomWidthX_id.value; // m
+	let roomY = inputRoomHeightY_id.value; // m
 	let tracksAmount = Math.ceil((roomY * 1000) / inputPanelWidthY_id.value); // ok
 	// console.log(`tracksAmount: ${tracksAmount}`);
 	let pathLength = roomX * tracksAmount; // m

@@ -17,10 +17,11 @@ export function drawPanels() {
 	for (let i = 0; i < len; i++) {
 		const svgRect = document.createElementNS(svgNS, "rect");
 		let drawRectWidth =
-			(width * inputPanelLengthX_id.value) / (+inputRoomWidth_id.value * 1000);
+			(width * inputPanelLengthX_id.value) / (+inputRoomWidthX_id.value * 1000);
 		// console.log(`drawRectWidth: ${drawRectWidth}`);
 		let drawRectHeight =
-			(height * inputPanelWidthY_id.value) / (+inputRoomHeight_id.value * 1000);
+			(height * inputPanelWidthY_id.value) /
+			(+inputRoomHeightY_id.value * 1000);
 		// rectWidth * panelX / roomX
 		// svgRect.setAttribute("x", 0 + (i * inputPanelLengthX_id.value) / 1000);
 		svgRect.setAttribute("x", 0 + i * +drawRectWidth);

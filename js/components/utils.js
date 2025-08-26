@@ -2,26 +2,26 @@ import { laminates } from "./laminates.js";
 import { drawPanels } from "./drawPanels.js";
 //
 export function inputToSpanText() {
-	inputRoomWidth_id.addEventListener("input", () => {
-		// inputWidthText_id.textContent = inputRoomWidth_id.value + " m";
-		roomWidthSpan.textContent = "Room X, " + inputRoomWidth_id.value + "m";
+	inputRoomWidthX_id.addEventListener("input", () => {
+		// inputWidthText_id.textContent = inputRoomWidthX_id.value + " m";
+		roomWidthSpan.textContent = "Room X, " + inputRoomWidthX_id.value + "m";
 	});
-	inputRoomHeight_id.addEventListener("input", () => {
-		// inputHeightText_id.textContent = inputRoomHeight_id.value + " m";
-		roomHeightSpan.textContent = "Room Y, " + inputRoomHeight_id.value + "m";
+	inputRoomHeightY_id.addEventListener("input", () => {
+		// inputHeightText_id.textContent = inputRoomHeightY_id.value + " m";
+		roomHeightSpan.textContent = "Room Y, " + inputRoomHeightY_id.value + "m";
 	});
 	//
 }
 //
 export function setAspectRatioToSvg() {
-	inputRoomWidth_id.addEventListener("input", () => {
-		const width = parseFloat(inputRoomWidth_id.value);
-		const height = parseFloat(inputRoomHeight_id.value);
+	inputRoomWidthX_id.addEventListener("input", () => {
+		const width = parseFloat(inputRoomWidthX_id.value);
+		const height = parseFloat(inputRoomHeightY_id.value);
 		svg_id.style.aspectRatio = `${width}/${height}`;
 	});
-	inputRoomHeight_id.addEventListener("input", () => {
-		const width = parseFloat(inputRoomWidth_id.value);
-		const height = parseFloat(inputRoomHeight_id.value);
+	inputRoomHeightY_id.addEventListener("input", () => {
+		const width = parseFloat(inputRoomWidthX_id.value);
+		const height = parseFloat(inputRoomHeightY_id.value);
 		svg_id.style.aspectRatio = `${width}/${height}`;
 	});
 }
@@ -43,12 +43,12 @@ export function handleFormSubmit() {
 	form_id.addEventListener("reset", () => {
 		setTimeout(() => {
 			//
-			roomWidthSpan.textContent = "Room X, " + inputRoomWidth_id.value + "m";
-			roomHeightSpan.textContent = "Room Y, " + inputRoomHeight_id.value + "m";
+			roomWidthSpan.textContent = "Room X, " + inputRoomWidthX_id.value + "m";
+			roomHeightSpan.textContent = "Room Y, " + inputRoomHeightY_id.value + "m";
 
 			//
-			const width = parseFloat(inputRoomWidth_id.value);
-			const height = parseFloat(inputRoomHeight_id.value);
+			const width = parseFloat(inputRoomWidthX_id.value);
+			const height = parseFloat(inputRoomHeightY_id.value);
 			svg_id.style.aspectRatio = `${width}/${height}`;
 		}, 500);
 	});
