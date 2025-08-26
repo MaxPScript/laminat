@@ -1,16 +1,13 @@
 import { laminates } from "./laminates.js";
 import { drawPanels } from "./drawPanels.js";
 //
-export function inputToSpanText() {
+export function inputToSvgLabels() {
 	inputRoomWidthX_id.addEventListener("input", () => {
-		// inputWidthText_id.textContent = inputRoomWidthX_id.value + " m";
 		roomWidthSpan.textContent = "Room X, " + inputRoomWidthX_id.value + "m";
 	});
 	inputRoomHeightY_id.addEventListener("input", () => {
-		// inputHeightText_id.textContent = inputRoomHeightY_id.value + " m";
 		roomHeightSpan.textContent = "Room Y, " + inputRoomHeightY_id.value + "m";
 	});
-	//
 }
 //
 export function setAspectRatioToSvg() {
