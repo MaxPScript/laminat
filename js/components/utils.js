@@ -23,30 +23,31 @@ export function setAspectRatioToSvg() {
 	});
 }
 //
-export function handleFormSubmit() {
-	form_id.addEventListener("submit", (event) => {
-		event.preventDefault();
-		const btn = event.submitter;
+// export function handleFormSubmit() {
+// 	form_id.addEventListener("submit", (event) => {
+// 		event.preventDefault();
+// 		const btn = event.submitter;
 
-		if (btn.textContent === "Apply") {
-			console.log("Apply logic");
-			// console.log(laminates());
-			drawPanels();
-		} else if (btn.textContent === "Reset") {
-			console.log("Reset logic");
-			form_id.reset();
-		}
-	});
-	form_id.addEventListener("reset", () => {
-		setTimeout(() => {
-			//
-			roomWidthSpan.textContent = "Room X, " + inputRoomWidthX_id.value + "m";
-			roomHeightSpan.textContent = "Room Y, " + inputRoomHeightY_id.value + "m";
+// 		if (btn.textContent === "Apply") {
+// 			console.log("Apply logic");
+// console.log(laminates());
+// 		drawPanels();
+// 	} else if (btn.textContent === "Reset") {
+// 		console.log("Reset logic");
+// 		form_id.reset();
+// 	}
+// });
+// form_id.addEventListener("reset", () => {
+// 	setTimeout(() => {
+//
+// roomWidthSpan.textContent = "Room X, " + inputRoomWidthX_id.value + "m";
+// roomHeightSpan.textContent = "Room Y, " + inputRoomHeightY_id.value + "m";
 
-			//
-			const width = parseFloat(inputRoomWidthX_id.value);
-			const height = parseFloat(inputRoomHeightY_id.value);
-			svg_id.style.aspectRatio = `${width}/${height}`;
-		}, 500);
-	});
-}
+//
+// 			const width = parseFloat(inputRoomWidthX_id.value);
+// 			const height = parseFloat(inputRoomHeightY_id.value);
+// 			svg_id.style.aspectRatio = `${width}/${height}`;
+// 		}, 500);
+// 	});
+// }
+//
